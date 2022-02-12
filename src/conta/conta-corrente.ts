@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente";
+import { Cliente } from "../cliente";
 import { Conta } from "./conta";
 
 export class ContaCorrente extends Conta {

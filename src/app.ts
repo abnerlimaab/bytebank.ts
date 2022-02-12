@@ -1,12 +1,10 @@
-import { Cliente } from "./cliente";
-import { Conta } from "./conta";
-import { ContaCorrente } from "./conta-corrente";
-import { ContaPoupanca } from "./conta-poupanca";
+import { Diretor } from "./funcionarios/diretor";
+import { Gerente } from "./funcionarios/gerente";
+import { SistemaAutenticacao } from "./sistema-autenticacao";
 
-const cliente = new Cliente("Abner", "123.456.789-10");
+const diretor = new Diretor("Rodrigo", 1000, "123.456.789-10");
+const gerente = new Gerente("Ricardo", 1000, "123.456.789-10");
 
-const contaCorrente = new ContaCorrente(123, cliente);
+diretor.cadastrarSenha("teste");
 
-const contaPoupanca = new ContaPoupanca(100, 234, cliente);
-
-console.log(cliente, contaCorrente, contaPoupanca);
+console.log(SistemaAutenticacao.login(diretor, "teste"));
