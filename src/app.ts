@@ -1,4 +1,5 @@
 import { Cliente } from "./cliente";
+import { Conta } from "./conta";
 import { ContaCorrente } from "./conta-corrente";
 import { ContaPoupanca } from "./conta-poupanca";
 

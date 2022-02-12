@@ -1,6 +1,6 @@
 import { Cliente } from "./cliente";
 
-export class Conta {
+export abstract class Conta {
 
     private _saldo : number;
     private _cliente : Cliente;
@@ -24,12 +24,9 @@ export class Conta {
         this._cliente = cliente;
     }
 
-    sacar(valor: number) {
-        let taxa = 1;
-        return this._sacar(valor, taxa);
-    }
+    abstract sacar(valor: number): number
     
-    protected _sacar(valor: number, taxa: number) {
+    protected _sacar(valor: number, taxa: number): number {
         const valorSacado = taxa * valor;
         if(this._saldo >= valorSacado) {
             this._saldo -= valorSacado;
@@ -50,4 +47,5 @@ export class Conta {
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
     }
+    
 }
