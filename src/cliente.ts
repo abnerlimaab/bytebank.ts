@@ -1,4 +1,6 @@
-export class Cliente {
+import { Autenticavel } from "./autenticavel";
+
+export class Cliente implements Autenticavel {
     
     private _nome: string;
     private _cpf: string;
@@ -8,6 +10,9 @@ export class Cliente {
         this._nome = nome;
         this._cpf = cpf;
         this._senha = senha;
+    }
+    autenticar(senha: string): boolean {
+        return this._senha == senha;
     }
 
 }

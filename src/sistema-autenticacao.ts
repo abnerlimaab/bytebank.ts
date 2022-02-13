@@ -1,7 +1,7 @@
-import { Funcionario } from "./funcionarios/funcionario";
+import { Autenticavel } from "./autenticavel";
 
 export class SistemaAutenticacao {
-    static login(funcionario: Funcionario, senha: string): boolean {
-        return funcionario.autenticar(senha);
+    static login(autenticavel: Autenticavel, senha: string): boolean {
+        return autenticavel.autenticar(senha);
     }
 }

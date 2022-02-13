@@ -1,4 +1,6 @@
-export class Funcionario {
+import { Autenticavel } from "../autenticavel";
+
+export class Funcionario implements Autenticavel {
 
     private _nome: string;
     private _salario: number;
